@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 08/01/2025 02:42:32 PM
-// Design Name: 
-// Module Name: top
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module top(
     input clk,
@@ -74,16 +54,8 @@ module top(
        else ssd_digit_sel <= ~ssd_digit_sel;
    end
     
-    //assign current_digit = PC_hex[0]; 
    
    assign current_digit = PC_hex[ssd_digit_sel]; 
    
-   /*always #20 clk = ~clk;
-    initial begin
-        reset=1;
-        #10; 
-        clk = 0;
-        assign reset=0;
-    end*/
     
 endmodule
